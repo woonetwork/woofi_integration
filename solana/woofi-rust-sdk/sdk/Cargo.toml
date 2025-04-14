@@ -1,0 +1,44 @@
+[package]
+name = "woofi_sdk"
+version = "0.1.0"
+description = "Created with Anchor"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "woofi_sdk"
+
+[features]
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+cpi = ["no-entrypoint"]
+default = []
+devnet = []
+
+[net]
+git-fetch-with-cli = true
+
+[dependencies]
+anchor-client = { workspace = true }
+anchor-lang = { workspace = true }
+anchor-spl = { workspace = true }
+clap = { workspace = true }
+arrayref = { workspace = true }
+spl-token = { workspace = true }
+solana-program = { workspace = true }
+solana-sdk = { workspace = true }
+solana-client = { workspace = true }
+solana-logger = { workspace = true }
+solana-rpc = { workspace = true }
+solana-zk-token-sdk = { workspace = true }
+solana-account-decoder = { workspace = true }
+jupiter-amm-interface = { workspace = true }
+anyhow = { workspace = true }
+pyth-solana-receiver-sdk = { workspace = true }
+thiserror = { workspace = true }
+subtle = { workspace = true }
+paste = { workspace = true }
+bincode = { workspace = true }
+tokio = { workspace = true }
+woofi = { workspace = true }
